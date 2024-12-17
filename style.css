@@ -1,4 +1,88 @@
-html {
-  height: 100%;
-  width: 100%;
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gradient: linear-gradient(45deg, #ff7c7d, #ffda67);
+  --card: #272524
+}
+
+body {
+  background:
+    var(--gradient);
+  color: fdfcfd;
+  font-family: 'Poppins';
+}
+
+.card{
+  display: flex;
+  align-items: center;
+  width: 75vw;
+  max-width: 650px;
+  padding:
+    44px 30px 44px 20px;
+  background:
+    var(--card);
+  border-radius: 10px;
+}
+
+.card img{
+  max-width: 280px;
+  width: 36vw;
+  height: 300px;
+  object-fit: cover;
+  margin-left: -60px;
+  margin-right: 30px;
+  border-radius: inheirt;
+  box-shadow:
+    0 60px 40px 
+    rgb(0 0 0 / 8%);
+  transition:
+    border-radius 0.3s;
+}
+
+.card h2{
+  font-size: 22px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-riight: 30px;
+  margin-bottom: 10px;
+}
+
+.card h3{
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.card p{
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.socials > button {
+  positon: relative;
+  borde: 0;
+  background: transparent;
+  color: #f8f8f8;
+  paddding: 0;
+}
+
+.socials > button:first::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 52px;
+  height: 52px;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background:
+    var(--gradient);
+  transition:0.3s;
+  transform: translateY(0);
 }
